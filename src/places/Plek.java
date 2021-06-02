@@ -1,3 +1,8 @@
+package places;
+
+import journeys.Reis;
+import steps.Stap;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

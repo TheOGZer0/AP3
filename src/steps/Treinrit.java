@@ -1,4 +1,9 @@
-public class Treinrit extends Stap{
+package steps;
+
+import places.Plek;
+import steps.Stap;
+
+public class Treinrit extends Stap {
     private final double journeyTime; //In minutes
     private double currentDelay; //In minutes
 

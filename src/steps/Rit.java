@@ -1,4 +1,8 @@
-public class Rit extends Stap{
+package steps;
+
+import places.Plek;
+
+public class Rit extends Stap {
     private double distance; //In KiloMeter
     private double speedLimit; //In Kilometer per Hour
 

@@ -1,4 +1,9 @@
-public class Vlucht extends Stap{
+package steps;
+
+import places.Plek;
+import steps.Stap;
+
+public class Vlucht extends Stap {
     private int price;
     private double baggageLossChance;
     private int baggagePrice;

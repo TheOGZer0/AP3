@@ -1,3 +1,7 @@
+package steps;
+
+import places.Plek;
+
 public abstract class Stap{
     protected final Plek a;
     protected final Plek b;
