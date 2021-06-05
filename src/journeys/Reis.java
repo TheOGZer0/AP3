@@ -28,6 +28,7 @@ public class Reis implements Comparable<Reis>{
     }
 
     public void addEdge(Stap stap){
+        //TODO: Add exception when adding to Reis with length infinity
         this.traversedEdges.add(stap);
         this.length += stap.getWeight();
     }
