@@ -22,6 +22,7 @@ class ReisTest {
                 " initialized at length infinity when constructor is called with parameter initAtInfinity = true.");
     }
 
+    @Test
     void addEdge() throws DijkstraError {
         Plek plek1 = new Plek("Plek1");
         Plek plek2 = new Plek("Plek2");
