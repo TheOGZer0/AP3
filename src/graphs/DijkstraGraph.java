@@ -15,7 +15,7 @@ public class DijkstraGraph{
 
     private void reset(){
         for(Plek node: this.nodes){
-            node.setShortestPath(new Reis());
+            node.setShortestPath(new Reis(true));
             node.setCompleted(false);
         }
     }
@@ -55,6 +55,8 @@ public class DijkstraGraph{
             }
             currentNode.setCompleted(true);
         }
-        return end.getShortestPath();
+        Reis result = end.getShortestPath();
+        this.reset();
+        return result;
     }
 }
