@@ -4,6 +4,7 @@ import steps.Stap;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Reis implements Comparable<Reis>{
     private double length;
@@ -54,5 +55,16 @@ public class Reis implements Comparable<Reis>{
         return Double.compare(this.length, o.getLength());
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Reis reis = (Reis) o;
+        return Objects.equals(traversedEdges, reis.traversedEdges);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(traversedEdges);
+    }
 }
