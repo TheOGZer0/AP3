@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+//TODO: Add exception for negative weights.
 public class DijkstraGraph{
     private Set<Plek> nodes = new HashSet<>();
 
