@@ -1,5 +1,6 @@
 package journeys;
 
+import misc.DijkstraError;
 import org.junit.jupiter.api.Test;
 import places.Plek;
 import steps.Rit;
@@ -21,7 +22,7 @@ class ReisTest {
                 " initialized at length infinity when constructor is called with parameter initAtInfinity = true.");
     }
 
-    void addEdge(){
+    void addEdge() throws DijkstraError {
         Plek plek1 = new Plek("Plek1");
         Plek plek2 = new Plek("Plek2");
 
@@ -41,7 +42,7 @@ class ReisTest {
     }
 
     @Test
-    void testCopyConstructor(){
+    void testCopyConstructor() throws DijkstraError {
         Plek plek1 = new Plek("Plek1");
         Plek plek2 = new Plek("Plek2");
         Plek plek3 = new Plek("Plek3");
@@ -64,7 +65,7 @@ class ReisTest {
     }
 
     @Test
-    void compareTo(){
+    void compareTo() throws DijkstraError {
         Plek plek1 = new Plek("Plek1");
         Plek plek2 = new Plek("Plek2");
 

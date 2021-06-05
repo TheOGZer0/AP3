@@ -1,6 +1,7 @@
 package graphs;
 
 import journeys.Reis;
+import misc.DijkstraError;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import places.Plek;
@@ -26,7 +27,7 @@ class DijkstraGraphTest {
     private DijkstraGraph graph;
 
     @BeforeEach
-    void setup(){
+    void setup() throws DijkstraError {
         // Test graph might seem a bit large for unit-testing purposes, but this test actually
         // caught a bug a smaller test-graph didn't.
 

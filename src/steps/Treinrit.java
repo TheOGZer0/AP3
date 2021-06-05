@@ -1,5 +1,6 @@
 package steps;
 
+import misc.DijkstraError;
 import places.Plek;
 import steps.Stap;
 
@@ -7,13 +8,13 @@ public class Treinrit extends Stap {
     private final double journeyTime; //In minutes
     private double currentDelay; //In minutes
 
-    public Treinrit(Plek a, Plek b, double journeyTime, double currentDelay){
+    public Treinrit(Plek a, Plek b, double journeyTime, double currentDelay) throws DijkstraError {
         super(a, b);
         this.journeyTime = journeyTime;
         this.currentDelay = currentDelay;
     }
 
-    public Treinrit(Plek a, Plek b, double journeyTime){
+    public Treinrit(Plek a, Plek b, double journeyTime) throws DijkstraError{
         this(a, b, journeyTime, 0.0);
     }
 

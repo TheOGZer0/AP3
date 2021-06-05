@@ -1,5 +1,6 @@
 package steps;
 
+import misc.DijkstraError;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import places.Plek;
@@ -10,6 +11,9 @@ class TreinritTest {
     private Plek plek1 = new Plek("plek1");
     private Plek plek2 = new Plek("plek2");
     private Treinrit treinRit1 = new Treinrit(plek1, plek2, 10);
+
+    TreinritTest() throws DijkstraError {
+    }
 
     @Test
     @Order(1)

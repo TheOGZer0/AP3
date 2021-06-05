@@ -1,5 +1,6 @@
 package steps;
 
+import misc.DijkstraError;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import places.Plek;
@@ -10,6 +11,9 @@ class RitTest {
     private Plek plek1 = new Plek("plek1");
     private Plek plek2 = new Plek("plek2");
     private Rit rit1 = new Rit(plek1, plek2, 10);
+
+    RitTest() throws DijkstraError {
+    }
 
     @Test
     void testConstructor(){

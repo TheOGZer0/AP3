@@ -1,15 +1,19 @@
 package steps;
 
+import misc.DijkstraError;
 import org.junit.jupiter.api.Test;
 import places.Plek;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class VluchtTest {
+class VluchtTest{
     private Plek plek1 = new Plek("plek1");
     private Plek plek2 = new Plek("plek2");
     private Vlucht vlucht1 = new Vlucht(plek1, plek2, 100);
     private Vlucht vlucht2 = new Vlucht(plek1, plek2, 100, 200, 10);
+
+    VluchtTest() throws DijkstraError {
+    }
 
     @Test
     void testConstructor(){
