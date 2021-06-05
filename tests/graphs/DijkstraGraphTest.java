@@ -27,6 +27,9 @@ class DijkstraGraphTest {
 
     @BeforeEach
     void setup(){
+        // Test graph might seem a bit large for unit-testing purposes, but this test actually
+        // caught a bug a smaller test-graph didn't.
+
         this.start = new Plek("Start");
         this.end = new Plek("End");
         this.p1 = new Plek("p1");
