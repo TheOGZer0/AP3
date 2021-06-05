@@ -88,4 +88,9 @@ class ReisTest {
                 "compareTo should not be based on amount of Stap instances stored in Reis instances being" +
                         " compared, but on the Stap lengths.");
     }
+
+    @Test
+    void equals(){
+        //TODO: Implement
+    }
 }
