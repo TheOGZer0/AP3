@@ -20,6 +20,9 @@ class TreinritTest {
     void testConstructor(){
         assertEquals(1, plek1.getEdges().size(), "Treinrit constructor should automatically call" +
                 ".connect() on plek instances being connected to.");
+
+        assertThrows(DijkstraError.class, () -> new Treinrit(plek1, plek2, -50),
+                "Should throw DijkstraError when constructing Treinrit with negative weight.");
     }
 
     @Test

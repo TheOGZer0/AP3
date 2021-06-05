@@ -14,6 +14,7 @@ public class Vlucht extends Stap {
         this.price = price;
         this.baggagePrice = baggagePrice;
         this.baggageLossChance = baggageLossChance;
+        this.verify_weight();
     }
 
     public Vlucht(Plek a, Plek b, int price) throws DijkstraError{

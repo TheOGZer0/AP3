@@ -2,7 +2,6 @@ package steps;
 
 import misc.DijkstraError;
 import places.Plek;
-import steps.Stap;
 
 public class Treinrit extends Stap {
     private final double journeyTime; //In minutes
@@ -12,6 +11,7 @@ public class Treinrit extends Stap {
         super(a, b);
         this.journeyTime = journeyTime;
         this.currentDelay = currentDelay;
+        this.verify_weight();
     }
 
     public Treinrit(Plek a, Plek b, double journeyTime) throws DijkstraError{

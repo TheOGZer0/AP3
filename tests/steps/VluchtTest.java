@@ -16,9 +16,12 @@ class VluchtTest{
     }
 
     @Test
-    void testConstructor(){
+    void testConstructor() throws DijkstraError{
         assertEquals(2, plek1.getEdges().size(), "Rit constructor should automatically call" +
                 ".connect() on plek instances being connected to.");
+
+        assertThrows(DijkstraError.class, () -> new Vlucht(plek1, plek2, -50),
+                "Should throw DijkstraError when constructing Vlucht with negative weight.");
     }
 
     @Test

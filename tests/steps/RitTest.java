@@ -19,6 +19,9 @@ class RitTest {
     void testConstructor(){
         assertEquals(1, plek1.getEdges().size(), "Rit constructor should automatically call" +
                 ".connect() on plek instances being connected to.");
+
+        assertThrows(DijkstraError.class, () -> new Rit(plek1, plek2, -50),
+                "Should throw DijkstraError when constructing Rit with negative weight.");
     }
 
     @Test

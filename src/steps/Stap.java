@@ -12,9 +12,6 @@ public abstract class Stap{
         this.b = b;
         a.connect(this);
         b.connect(this);
-        if(this.getWeight() < 0){
-            throw new DijkstraError(this);
-        }
     }
 
     public Plek getOther(Plek origin){
@@ -27,4 +24,10 @@ public abstract class Stap{
 
     public abstract String toString();
     public abstract double getWeight();
+
+    protected void verify_weight() throws DijkstraError{
+        if(this.getWeight() < 0){
+            throw new DijkstraError(this);
+        }
+    }
 }
