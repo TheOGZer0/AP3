@@ -1,6 +1,7 @@
 package graphs;
 
 import journeys.Reis;
+import misc.DijkstraError;
 import places.Plek;
 import steps.Stap;
 
@@ -30,7 +31,7 @@ public class DijkstraGraph{
         }
     }
 
-    public Reis shortestPath(Plek start, Plek end){
+    public Reis shortestPath(Plek start, Plek end) throws DijkstraError {
         // Initialize everything for Dijkstra
         start.setShortestPath(new Reis());
         PriorityQueue<Plek> priorityQueue = new PriorityQueue<>();

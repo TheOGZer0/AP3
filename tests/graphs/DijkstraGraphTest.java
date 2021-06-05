@@ -53,7 +53,7 @@ class DijkstraGraphTest {
     }
 
     @Test
-    void shortestPath() {
+    void shortestPath() throws DijkstraError{
         Reis expectedPath = new Reis();
 
         expectedPath.addEdge(sp1);

@@ -1,5 +1,6 @@
 package journeys;
 
+import misc.DijkstraError;
 import steps.Stap;
 
 import java.util.ArrayList;
@@ -28,8 +29,10 @@ public class Reis implements Comparable<Reis>{
         return this.length;
     }
 
-    public void addEdge(Stap stap){
-        //TODO: Add exception when adding to Reis with length infinity
+    public void addEdge(Stap stap) throws DijkstraError{
+        if(this.length == Double.POSITIVE_INFINITY){
+            throw new DijkstraError("Adding Stap to undiscovered Reis with length infinity not allowed.");
+        }
         this.traversedEdges.add(stap);
         this.length += stap.getWeight();
     }
