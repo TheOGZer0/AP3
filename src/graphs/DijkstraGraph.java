@@ -49,7 +49,9 @@ public class DijkstraGraph{
                     Reis newPossiblePath = new Reis(currentNode.getShortestPath());
                     newPossiblePath.addEdge(edge);
                     if(newPossiblePath.compareTo(node.getShortestPath()) < 0){
+                        priorityQueue.remove(node);
                         node.setShortestPath(newPossiblePath);
+                        priorityQueue.add(node);
                     }
                 }
             }
