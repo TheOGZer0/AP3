@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import places.Plek;
 import steps.Rit;
 import steps.Stap;
+import steps.Treinrit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,7 +93,49 @@ class ReisTest {
     }
 
     @Test
-    void equals(){
-        //TODO: Implement
+    void equals() throws DijkstraError {
+        Plek plek1 = new Plek("Plek1");
+        Plek plek2 = new Plek("Plek2");
+
+        Stap ritLength5 = new Rit(plek1, plek2, 5);
+        Stap ritLength10 = new Rit(plek1, plek2, 10);
+
+        Reis reis1TestCase1 = new Reis();
+        Reis reis2TestCase1 = new Reis();
+
+        reis1TestCase1.addEdge(ritLength5);
+        reis2TestCase1.addEdge(ritLength5);
+
+        reis1TestCase1.addEdge(ritLength10);
+        reis2TestCase1.addEdge(ritLength10);
+
+        assertEquals(reis2TestCase1, reis1TestCase1, "Reis instances with identical traversedEdges" +
+                " should be equal.");
+
+        Reis reis1TestCase2 = new Reis();
+        Reis reis2TestCase2 = new Reis();
+
+        reis1TestCase2.addEdge(ritLength5);
+        reis1TestCase2.addEdge(ritLength10);
+
+        reis2TestCase2.addEdge(ritLength10);
+        reis2TestCase2.addEdge(ritLength5);
+
+        assertNotEquals(reis2TestCase2, reis2TestCase1, "Reis equality should" +
+                " include traversed edge order.");
+
+        Reis reis1TestCase3 = new Reis();
+        Reis reis2TestCase3 = new Reis();
+
+        Treinrit treinRitVariableLength = new Treinrit(plek1, plek2, 10);
+
+        reis1TestCase3.addEdge(treinRitVariableLength);
+
+        treinRitVariableLength.setCurrentDelay(10);
+
+        reis2TestCase3.addEdge(treinRitVariableLength);
+
+        assertEquals(reis2TestCase3, reis1TestCase3, "Reis equality should not be based on length," +
+                "but solely on contained Stap instances.");
     }
 }
