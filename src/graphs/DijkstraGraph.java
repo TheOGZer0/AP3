@@ -14,6 +14,13 @@ import java.util.Set;
 public class DijkstraGraph{
     private Set<Plek> nodes = new HashSet<>();
 
+    private void reset(){
+        for(Plek node: this.nodes){
+            node.setShortestPath(new Reis());
+            node.setCompleted(false);
+        }
+    }
+
     public void addToNodes(Plek node){
         this.nodes.add(node);
     }
