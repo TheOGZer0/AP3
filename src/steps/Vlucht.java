@@ -2,7 +2,6 @@ package steps;
 
 import misc.DijkstraError;
 import places.Plek;
-import steps.Stap;
 
 public class Vlucht extends Stap {
     private int price;
@@ -14,7 +13,7 @@ public class Vlucht extends Stap {
         this.price = price;
         this.baggagePrice = baggagePrice;
         this.baggageLossChance = baggageLossChance;
-        this.verify_weight();
+        this.verifyWeight();
     }
 
     public Vlucht(Plek a, Plek b, int price) throws DijkstraError{

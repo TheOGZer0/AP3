@@ -11,7 +11,7 @@ public class Treinrit extends Stap {
         super(a, b);
         this.journeyTime = journeyTime;
         this.currentDelay = currentDelay;
-        this.verify_weight();
+        this.verifyWeight();
     }
 
     public Treinrit(Plek a, Plek b, double journeyTime) throws DijkstraError{

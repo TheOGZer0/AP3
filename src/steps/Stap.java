@@ -25,7 +25,7 @@ public abstract class Stap{
     public abstract String toString();
     public abstract double getWeight();
 
-    protected void verify_weight() throws DijkstraError{
+    protected void verifyWeight() throws DijkstraError{
         if(this.getWeight() < 0){
             throw new DijkstraError(this);
         }

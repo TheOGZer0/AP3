@@ -9,7 +9,7 @@ public class Rit extends Stap {
     public Rit(Plek a, Plek b, double distance) throws DijkstraError{
         super(a, b);
         this.distance = distance;
-        this.verify_weight();
+        this.verifyWeight();
     }
 
     @Override
