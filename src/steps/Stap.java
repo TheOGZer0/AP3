@@ -4,7 +4,7 @@ import misc.DijkstraError;
 import places.Plek;
 
 /**
- * Abstract "Stap", that's meant as edge in a graph to be traversed using Dijkstra's algorithm.
+ * Abstract "Stap", that's meant as bidirectional edge in a graph to be traversed using Dijkstra's algorithm.
  */
 public abstract class Stap{
 
