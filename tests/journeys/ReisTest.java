@@ -40,7 +40,13 @@ class ReisTest {
         assertEquals(reis.getTraversedEdges(), edgeList, "addEdge(Stap) should add Stap parameter to" +
                 " this.traversedEdges.");
 
-        assertEquals(reis.getLength(), 15, "addEdge(Stap) should increment Reis.length with Stap.weight.");
+        assertEquals(reis.getLength(), 15, "addEdge(Stap) should increment" +
+                " Reis.length with Stap.weight.");
+
+        Reis infinityReis = new Reis(true);
+
+        assertThrows(DijkstraError.class, () -> infinityReis.addEdge(rit), "Adding Stap" +
+                " to Reis initialized at infinity should throw DijkstraError.");
     }
 
     @Test
