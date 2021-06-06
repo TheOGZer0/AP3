@@ -15,7 +15,7 @@ public abstract class Stap{
      *
      * @param a node at end of edge.
      * @param b node at end of edge.
-     * @throws DijkstraError called by subclass constructors.
+     * @throws DijkstraError thrown by subclass constructors.
      */
     public Stap(Plek a, Plek b) throws DijkstraError{
         this.a = a;
