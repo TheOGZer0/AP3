@@ -7,14 +7,17 @@ import places.Plek;
  * Abstract "Stap", that's meant as edge in a graph to be traversed using Dijkstra's algorithm.
  */
 public abstract class Stap{
+
+    /** Node at end A of edge. */
     protected final Plek a;
+    /** Node at end B of edge. */
     protected final Plek b;
 
     /**
      * Constructor, that also calls .connect() on a and b, with itself as parameter.
      *
-     * @param a node at end of edge.
-     * @param b node at end of edge.
+     * @param a {@link Stap#a}.
+     * @param b {@link Stap#b}.
      * @throws DijkstraError thrown by subclass constructors.
      */
     public Stap(Plek a, Plek b) throws DijkstraError{
