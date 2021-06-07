@@ -14,9 +14,7 @@ import java.util.Set;
  * Graph for shortest-path finding purposes using Dijkstra's algorithm.
  */
 public class DijkstraGraph{
-    /**
-     * All nodes to be traversed by the algorhitm.
-     */
+    /** All nodes to be traversed by the algorithm. */
     private Set<Plek> nodes = new HashSet<>();
 
     /**
