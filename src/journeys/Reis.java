@@ -73,7 +73,7 @@ public class Reis implements Comparable<Reis>{
         if(this.length == Double.POSITIVE_INFINITY){
             return "Undetermined journey";
         }else{
-            String result = "Journey with length " + Double.toString(this.length) + " with path:" + "\n";
+            String result = "Journey with length " + Double.toString(this.length) + " and path:" + "\n";
             for(Stap edge: this.traversedEdges){
                 result += edge.toString() + "\n";
             }
